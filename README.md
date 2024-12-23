@@ -29,9 +29,9 @@ Learn more about the following Go examples:
 
 ---
 
-## Build Your First Application
+# Build Your First Application
 
-### 1. Develop an HTTP Server
+## 1. Develop an HTTP Server
 
 Implement an API for user registration and login:
 
@@ -44,13 +44,13 @@ Implement an API for user registration and login:
 
 ---
 
-### 2. Data Persistence
+## 2. Data Persistence
 
 - Ensure that user data is not lost after the application restarts.
 - Save and load user data from a file (research how to implement file-based storage and retrieval in Go).
 
 ---
 
-### 3. User Profile Image
+## 3. User Profile Image
 
 - Allow users to set their user profile using an image file.
