@@ -28,10 +28,8 @@ Write a function to solve the [Two Sum](https://leetcode.com/problems/two-sum/) 
 
 Learn more about the following Go examples:
 
-- [Time handling](https://gobyexample.com/time)
-- [Time formatting and parsing](https://gobyexample.com/time-formatting-parsing)
-- [String formatting](https://gobyexample.com/string-formatting)
-  Given a file a.txt, write a function that returns a slice of structs representing people, with information extracted from the file. The requirements are:
+Given a file a.txt, write a function that returns a slice of structs representing people, with information extracted from the file. The requirements are:
+
 - The name must be converted to all uppercase.
 - The profession must be converted to all lowercase.
   (Refer to file reading instructions at: https://zetcode.com/golang/readfile/).
