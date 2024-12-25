@@ -9,6 +9,42 @@
 
 package main
 
+import (
+	"bufio"
+	"fmt"
+	"log"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func convertToStruct() []Person {
+	var persons []Person
+	f, err := os.Open("a.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	defer f.Close()
+
+	scanner := bufio.NewScanner(f)
+
+	for scanner.Scan() {
+		var person Person
+		info := scanner.Text()
+		fmt.Println(info)
+
+		infoSlice := strings.Split(info, "|")
+
+		person.name = strings.ToUpper(infoSlice[0]) 
+		person.profession = strings.ToLower(infoSlice[1])
+		person.yearOfBirth,_ = strconv.Atoi(infoSlice[2])
+
+		persons = append(persons, person)
+	}
+	return persons
+}
+
 func Exercise_4() {
-	
+	fmt.Println("Slice of persons: ", convertToStruct())
 }
