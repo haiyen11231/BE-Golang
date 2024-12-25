@@ -33,3 +33,26 @@ Given a file a.txt, write a function that returns a slice of structs representin
 - The name must be converted to all uppercase.
 - The profession must be converted to all lowercase.
   (Refer to file reading instructions at: https://zetcode.com/golang/readfile/).
+
+---
+
+# Installation
+
+## 1. Clone the repository:
+
+```bash
+git clone https://github.com/haiyen11231/BE-Golang.git
+cd BE-Golang
+```
+
+## 2. Install dependencies:
+
+```bash
+go mod tidy
+```
+
+## 4. Run application:
+
+```bash
+go run .
+```

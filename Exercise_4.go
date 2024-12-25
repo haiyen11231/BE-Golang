@@ -8,3 +8,7 @@
 // 	Emil|Football player|1987
 
 package main
+
+func Exercise_4() {
+	
+}
