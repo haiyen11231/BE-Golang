@@ -6,6 +6,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"time"
 )
 
 var dummyResponse = Response{
@@ -252,4 +253,12 @@ func GetEmployees() ([]Employee, error) {
 	log.Printf("API Response: %+v\n", responseObject)
 	
 	return responseObject.Data, nil
+}
+
+func Worker (id int, jobs <-chan Employee, results chan<- string) {
+	for j := range jobs {
+		fmt.Println("Worker", id, "Employee", j.ID, j.Name)
+		time.Sleep(time.Second)
+		results <- fmt.Sprintf("Worker %d Employee %d Result %d", id, j.ID, j.Salary/j.Age)
+	}
 }
